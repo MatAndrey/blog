@@ -1,0 +1,15 @@
+{
+  "include": ["./src", "./src/json-server/db.json"],
+  "exclude": ["./node_modules"],
+  "compilerOptions": {
+    "target": "es2018",
+    "module": "CommonJS",
+    "outDir": "build",
+    "sourceMap": true,
+    "allowJs": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "strict": true,
+    "resolveJsonModule": true
+  }
+}

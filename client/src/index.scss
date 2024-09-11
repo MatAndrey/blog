@@ -1,0 +1,258 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+svg {
+  pointer-events: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font: inherit;
+}
+
+// RESET END
+
+body {
+  overflow-x: hidden;
+}
+
+body,
+* {
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 16px;
+  color: var(--font-primary-color);
+  transition: background-color, color 0.3s;
+}
+
+a {
+  color: var(--link-color);
+}
+
+[data-tooltip]::after {
+  content: attr(data-tooltip);
+  top: 0;
+  left: 0;
+  position: absolute;
+  background: var(--post-color);
+  padding: 6px;
+  border: 1px solid var(--bg-color);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 12px;
+  opacity: 0;
+  margin-bottom: -80px;
+  transition: 0.4s 0s;
+  color: var(--font-primary-color);
+}
+
+[data-tooltip]:hover::after {
+  top: auto;
+  left: auto;
+  opacity: 1;
+  transition: 0.4s 1s;
+}
+
+html[data-theme="light"] {
+  --font-primary-color: rgb(0, 0, 0);
+  --font-secondary-color: rgb(51, 51, 51);
+  --font-thirdly-color: rgb(102, 102, 102);
+  --bg-color: rgb(229, 239, 247);
+  --header-color: rgb(115, 188, 247);
+  --footer-color: rgb(68, 68, 68);
+  --post-color: rgb(250, 253, 255);
+  --link-color: rgb(105, 172, 248);
+  --light-blue: rgba(84, 182, 238, 0.8);
+  --blue: rgba(49, 169, 238, 0.8);
+  --warning-color: rgba(253, 36, 36, 0.7);
+  --light-gray: rgb(156, 156, 156);
+  --border-color: rgb(218, 222, 225);
+  --not-info-background: rgb(186, 230, 166);
+  --not-error-background: rgb(221, 126, 126);
+}
+
+html[data-theme="dark"] {
+  --font-primary-color: rgb(255, 255, 255);
+  --font-secondary-color: rgb(212, 212, 212);
+  --font-thirdly-color: rgb(150, 150, 150);
+  --bg-color: rgb(28, 28, 29);
+  --header-color: rgb(47, 58, 67);
+  --footer-color: rgb(46, 46, 46);
+  --post-color: #333536;
+  --link-color: #69acf8;
+  --light-blue: rgba(84, 182, 238, 0.8);
+  --blue: rgba(49, 169, 238, 0.8);
+  --warning-color: rgba(182, 73, 73, 0.7);
+  --light-gray: rgb(156, 156, 156);
+  --border-color: rgb(69, 70, 70);
+  --not-info-background: rgb(54, 75, 45);
+  --not-error-background: rgb(95, 48, 48);
+
+  --ck-border-radius: 4px;
+  --ck-font-size-base: 14px;
+  --ck-custom-background: hsl(270, 1%, 29%);
+  --ck-custom-foreground: hsl(255, 3%, 18%);
+  --ck-custom-border: hsl(300, 1%, 22%);
+  --ck-custom-white: hsl(0, 0%, 100%);
+  --ck-color-base-foreground: var(--ck-custom-background);
+  --ck-color-base-background: rgb(73, 73, 73);
+  --ck-color-focus-border: hsl(208, 90%, 62%);
+  --ck-color-text: hsl(0, 0%, 98%);
+  --ck-color-shadow-drop: hsla(0, 0%, 0%, 0.2);
+  --ck-color-shadow-inner: hsla(0, 0%, 0%, 0.1);
+  --ck-color-button-default-hover-background: hsl(270, 1%, 22%);
+  --ck-color-button-default-active-background: hsl(270, 2%, 20%);
+  --ck-color-button-default-active-shadow: hsl(270, 2%, 23%);
+  --ck-color-button-default-disabled-background: var(--ck-custom-background);
+  --ck-color-button-on-background: var(--ck-custom-foreground);
+  --ck-color-button-on-hover-background: hsl(255, 4%, 16%);
+  --ck-color-button-on-active-background: hsl(255, 4%, 14%);
+  --ck-color-button-on-active-shadow: hsl(240, 3%, 19%);
+  --ck-color-button-on-disabled-background: var(--ck-custom-foreground);
+  --ck-color-button-action-background: hsl(168, 76%, 42%);
+  --ck-color-button-action-hover-background: hsl(168, 76%, 38%);
+  --ck-color-button-action-active-background: hsl(168, 76%, 36%);
+  --ck-color-button-action-active-shadow: hsl(168, 75%, 34%);
+  --ck-color-button-action-disabled-background: hsl(168, 76%, 42%);
+  --ck-color-button-action-text: var(--ck-custom-white);
+  --ck-color-button-save: hsl(120, 100%, 46%);
+  --ck-color-button-cancel: hsl(15, 100%, 56%);
+  --ck-color-dropdown-panel-background: var(--ck-custom-background);
+  --ck-color-dropdown-panel-border: var(--ck-custom-foreground);
+  --ck-color-split-button-hover-background: var(--ck-color-button-default-hover-background);
+  --ck-color-split-button-hover-border: var(--ck-custom-foreground);
+  --ck-color-input-background: var(--ck-custom-background);
+  --ck-color-input-border: hsl(257, 3%, 43%);
+  --ck-color-input-text: hsl(0, 0%, 98%);
+  --ck-color-input-disabled-background: hsl(255, 4%, 21%);
+  --ck-color-input-disabled-border: hsl(250, 3%, 38%);
+  --ck-color-input-disabled-text: hsl(0, 0%, 78%);
+  --ck-color-labeled-field-label-background: var(--ck-custom-background);
+  --ck-color-list-background: var(--ck-custom-background);
+  --ck-color-list-button-hover-background: var(--ck-color-base-foreground);
+  --ck-color-list-button-on-background: var(--ck-color-base-active);
+  --ck-color-list-button-on-background-focus: var(--ck-color-base-active-focus);
+  --ck-color-list-button-on-text: var(--ck-color-base-background);
+  --ck-color-panel-background: var(--ck-custom-background);
+  --ck-color-panel-border: var(--ck-custom-border);
+  --ck-color-toolbar-background: var(--ck-custom-background);
+  --ck-color-toolbar-border: var(--ck-custom-border);
+  --ck-color-tooltip-background: hsl(252, 7%, 14%);
+  --ck-color-tooltip-text: hsl(0, 0%, 93%);
+  --ck-color-image-caption-background: hsl(0, 0%, 97%);
+  --ck-color-image-caption-text: hsl(0, 0%, 20%);
+  --ck-color-widget-blurred-border: hsl(0, 0%, 87%);
+  --ck-color-widget-hover-border: hsl(43, 100%, 68%);
+  --ck-color-widget-editable-focus-background: var(--ck-custom-white);
+  --ck-color-link-default: hsl(190, 100%, 75%);
+}

@@ -1,0 +1,24 @@
+{
+    "name": "blog",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "build:server": "cd ./server && npm install && npm run build",
+        "build:client": "cd ./client && npm install && npm run build",
+        "start": "cd ./server && npm run start",
+        "build": "npm run build:server && npm run build:client",
+        "dev": "cd ./server && npm run dev"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/MatAndrey/blog.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/MatAndrey/blog/issues"
+    },
+    "homepage": "https://github.com/MatAndrey/blog#readme"
+}
